@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Creative digital</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link rel="shortcut icon" href="favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon.png">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/normalize.css" />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!--[if lte IE 9]>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none; height: 0">
+        <symbol id="slider-arrow-prev" viewBox="0 0 22 38">
+            <path d="M183.877,3161.53a1.125,1.125,0,0,1-.359,1.46l-20.057,17.87a0.94,0.94,0,0,1-1.338-.39,1.121,1.121,0,0,1,.359-1.46l20.057-17.87A0.941,0.941,0,0,1,183.877,3161.53Zm0,36.94a1.123,1.123,0,0,0-.359-1.46l-20.057-17.87a0.94,0.94,0,0,0-1.338.39,1.124,1.124,0,0,0,.359,1.46l20.057,17.87A0.941,0.941,0,0,0,183.877,3198.47Z" transform="translate(-162 -3161)" />
+        </symbol>
+        <symbol id="slider-arrow-next" viewBox="0 0 22 38">
+            <path d="M1410.12,3161.53a1.124,1.124,0,0,0,.36,1.46l20.06,17.87a0.942,0.942,0,0,0,1.34-.39,1.122,1.122,0,0,0-.36-1.46l-20.06-17.87A0.942,0.942,0,0,0,1410.12,3161.53Zm0,36.94a1.122,1.122,0,0,1,.36-1.46l20.06-17.87a0.942,0.942,0,0,1,1.34.39,1.124,1.124,0,0,1-.36,1.46l-20.06,17.87A0.942,0.942,0,0,1,1410.12,3198.47Z" transform="translate(-1410 -3161)" />
+        </symbol>
+        <symbol id="behance" viewBox="0 0 32 32">
+            <path d="M685,4337a16,16,0,1,1-16,16A16,16,0,0,1,685,4337Zm-10,10h5.793c2.344,0,3.929.79,3.929,2.97a2.558,2.558,0,0,1-1.673,2.44,2.879,2.879,0,0,1,2.259,2.97c0,2.37-2.121,3.39-4.344,3.39H675V4347Zm2.475,4.71h2.972a1.4,1.4,0,0,0,1.655-1.39c0-1.12-.9-1.35-1.861-1.35h-2.766v2.74Zm0,5.16H680.6c1.069,0,1.922-.33,1.922-1.54s-0.715-1.67-1.87-1.67h-3.179v3.21Zm10.924-2.04c0.069,1.47.827,2.42,2.188,2.42a2.315,2.315,0,0,0,2.035-1.3h2.154a4.554,4.554,0,0,1-8.851-1.41,4.374,4.374,0,0,1,4.576-4.47c3.034,0,4.5,2.16,4.327,4.76H688.4Zm3.982-1.52c-0.224-1.18-.76-1.48-1.949-1.48-1.551,0-2,.82-2.033,1.48h3.982Zm0.774-3.95h-4.931v-1.57h4.931v1.57Z" transform="translate(-669 -4337)" />
+        </symbol>
+        <symbol id="linked-in" viewBox="0 0 32 32">
+            <path d="M742,4337a16,16,0,1,1-16,16A16,16,0,0,1,742,4337Zm-8.516,7.46a1.5,1.5,0,0,0-.476,1.11,1.561,1.561,0,0,0,.481,1.15,1.619,1.619,0,0,0,1.164.47,1.571,1.571,0,0,0,1.14-.46,1.571,1.571,0,0,0,0-2.26,1.606,1.606,0,0,0-1.154-.47A1.583,1.583,0,0,0,733.484,4344.46ZM733,4360h3.275v-12.01H733V4360Zm5.73,0h3.258v-4.36a11.65,11.65,0,0,1,.163-2.5,3.244,3.244,0,0,1,1.121-1.74,3.055,3.055,0,0,1,1.936-.63,2.676,2.676,0,0,1,1.461.38,1.988,1.988,0,0,1,.829,1.11,11.424,11.424,0,0,1,.238,2.93V4360H751v-7.56a4,4,0,0,0-1.351-3.22,5.009,5.009,0,0,0-3.5-1.28,5.212,5.212,0,0,0-1.866.34,10.214,10.214,0,0,0-2.274,1.31v-1.6H738.73V4360Z" transform="translate(-726 -4337)" />
+        </symbol>
+        <symbol id="google-icon" viewBox="0 0 32 32">
+            <path d="M800,4337a16.005,16.005,0,1,1-16,16A16,16,0,0,1,800,4337Zm-1.346,7.27a6.013,6.013,0,0,1,2.429,4.78c0,2.62-1.437,3.86-2.873,5.03a2.517,2.517,0,0,0-.958,1.74,1.931,1.931,0,0,0,.889,1.52l1.232,1c1.506,1.31,2.873,2.51,2.873,4.96,0,3.33-3.113,6.7-9,6.7-4.96,0-7.354-2.45-7.354-5.07a5.121,5.121,0,0,1,2.634-4.32c2.121-1.35,5-1.53,6.533-1.63a3.807,3.807,0,0,1-1.025-2.41,3.276,3.276,0,0,1,.342-1.39,10.649,10.649,0,0,1-1.1.07,5.5,5.5,0,0,1-5.679-5.56,6.464,6.464,0,0,1,2.19-4.75,9.073,9.073,0,0,1,6.123-1.95h7.046l-2.189,1.28h-2.121ZM796.225,4360a6.312,6.312,0,0,0-.786-0.03,13.139,13.139,0,0,0-3.592.57,3.929,3.929,0,0,0-2.942,3.65c0,2.51,2.36,4.32,6.021,4.32,3.284,0,5.028-1.63,5.028-3.83,0-1.81-1.128-2.76-3.729-4.68h0Zm0.994-6.73a3.683,3.683,0,0,0,.854-2.59c0-2.55-1.47-6.52-4.311-6.52a3.153,3.153,0,0,0-2.394,1.17,4.181,4.181,0,0,0-.753,2.62c0,2.38,1.334,6.31,4.276,6.31a3.429,3.429,0,0,0,2.328-.99h0Zm8.687-10.27h2v8h-2v-8Zm-3,3h8v2h-8v-2Z" transform="translate(-784 -4337)" />
+        </symbol>
+        <symbol id="facebook" viewBox="0 0 32 32">
+            <path d="M857,4337a16,16,0,1,1-16,16A16,16,0,0,1,857,4337Zm6,6v4h-2a1.17,1.17,0,0,0-1,1v2h3l-1,4h-2v9h-4v-9h-2v-4h2v-3s-0.748-4,3.126-4H863Z" transform="translate(-841 -4337)" />
+        </symbol>
+        <symbol id="twitter" viewBox="0 0 32 32">
+            <path d="M914,4337a16,16,0,1,1-16,16A16,16,0,0,1,914,4337Zm9.9,10.2a6.738,6.738,0,0,1-2.121.64,4.006,4.006,0,0,0,1.623-2.23,7.055,7.055,0,0,1-2.345.98,3.537,3.537,0,0,0-2.7-1.28,3.879,3.879,0,0,0-3.693,4.04,4.417,4.417,0,0,0,.1.92,10.235,10.235,0,0,1-7.613-4.22,4.331,4.331,0,0,0-.5,2.03,4.14,4.14,0,0,0,1.643,3.36,3.452,3.452,0,0,1-1.672-.5c0,0.01,0,.03,0,0.05a3.964,3.964,0,0,0,2.963,3.96,3.483,3.483,0,0,1-.973.14,3.2,3.2,0,0,1-.695-0.07,3.753,3.753,0,0,0,3.45,2.8,6.984,6.984,0,0,1-4.587,1.73,8.526,8.526,0,0,1-.881-0.05,9.857,9.857,0,0,0,5.662,1.81c6.793,0,10.508-6.15,10.508-11.49,0-.18,0-0.35-0.011-0.52a7.818,7.818,0,0,0,1.843-2.1" transform="translate(-898 -4337)" />
+        </symbol>
+    </svg>
+    <!-- BEGIN of header -->
+    <header id="scroll-top" class="section-overlay">
+        <div class="container z-index">
+            <div class="head-top cf">
+                <a href="index.html" class="head-logo">
+                    <img src="assets/img/logo.svg" alt="Creative digital">
+                </a>
+                <nav class="navigation">
+                    <button class="menu-toggle menu-toggle--collapse" type="button">
+                        <span class="menu-toggle__box">
+                            <span class="menu-toggle__inner"></span>
+                        </span>
+                    </button>
+                    <ul class="navigation__list">
+                        <li class="navigation__item">
+                            <a href="#" class="navigation__link">Home</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="#about" class="navigation__link">About</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="#services" class="navigation__link">Services</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="#works" class="navigation__link">Works</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="#contact" class="navigation__link">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- END row -->
+            <div class="intro">
+                <h1 class="wow fadeInDown intro__title" data-wow-delay="0.5s">Creative digital project</h1>
+                <p class="wow fadeInUp intro__desc" data-wow-delay="0.5s">Duis mollis, est non commodo luctus,
+                    <br> nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+            </div>
+            <!-- END intro -->
+        </div>
+        <!-- END container -->
+    </header>
+    <!-- END of header -->
+    <main>
+        <!-- BEGIN about  -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about__inner">
+                        <div class="about__img-box section-overlay">
+                            <i class="section-icon" style="background-image: url(assets/img/about-icon.png);"></i>
+                            <h3 class="section-title z-index">About us</h3>
+                        </div>
+                        <!-- END col -->
+                        <div class="about__desc">
+                            <p class="about__text">Nullam quis risus eget urna <span class="about__text--bold">mollis ornare</span> vel eu leo. Donec id elit non mi porta gravida at eget metus. Donec ullamcorper nulla non metus auctor fringilla. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                            <p class="about__text"><span class="about__text--bold">Morbi leo risus</span>, porta ac consectetur ac, vestibulum at eros. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas faucibus mollis interdum. Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis.</p>
+                            <a href="#" class="btn about__btn">Learn more</a>
+                        </div>
+                        <!-- END col -->
+                    </div>
+                    <!-- END about__inner -->
+                </div>
+                <!-- END row -->
+            </div>
+            <!-- END container -->
+        </section>
+        <!-- END about -->
+        <!-- BEGIN services  -->
+        <section id="services" class="services">
+            <div class="container">
+                <div class="row services__inner">
+                    <div class="services__item services__item--small section-overlay no-padding">
+                        <div class="service z-index">
+                            <i class="service__icon" style="background-image: url('assets/img/icon-services.png');"></i>
+                            <h3 class="section-title services__title">Our services</h3>
+                            <blockquote class="service__text service__quote">“Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue.”</blockquote>
+                            <p class="service__author">- Borat -</p>
+                        </div>
+                        <!-- END service -->
+                    </div>
+                    <!-- END services__item -->
+                    <div class="services__item no-padding">
+                        <div class="col-sm-6 service service--bg-color">
+                            <i class="service__icon" style="background-image: url('assets/img/icon-graphic.png');"></i>
+                            <h3 class="service__title">Graphic design</h3>
+                            <p class="service__text">Cras mattis consectetur purus sit amet fermentum.</p>
+                        </div>
+                        <!-- END service -->
+                        <div class="col-sm-6 service">
+                            <i class="service__icon" style="background-image: url('assets/img/icon-web.png');"></i>
+                            <h3 class="service__title">Web development</h3>
+                            <p class="service__text">Cras mattis consectetur purus sit amet fermentum.</p>
+                        </div>
+                        <!-- END service -->
+                        <div class="col-sm-6 col-sm-push-6 service service--bg-color service--padding">
+                            <i class="service__icon" style="background-image: url('assets/img/icon-mobile.png');"></i>
+                            <h3 class="service__title">Mobile development</h3>
+                            <p class="service__text">Cras mattis consectetur purus sit amet fermentum.</p>
+                        </div>
+                        <!-- END service -->
+                        <div class="col-sm-6 col-sm-pull-6 service service--padding">
+                            <i class="service__icon" style="background-image: url('assets/img/icon-SEO.png');"></i>
+                            <h3 class="service__title">SEO &amp; MARKETING</h3>
+                            <p class="service__text">Cras mattis consectetur purus sit amet fermentum.</p>
+                        </div>
+                        <!-- END service -->
+                    </div>
+                    <!-- END services__item -->
+                </div>
+                <!-- END row -->
+            </div>
+            <!-- END container -->
+        </section>
+        <!-- END services -->
+        <!-- BEGIN work  -->
+        <section id="works" class="works section-overlay section-overlay--works">
+            <div class="container z-index">
+                <i class="section-icon works__icon" style="background-image: url('assets/img/icon-works.png');"></i>
+                <h3 class="section-title works__title">Recent works</h3>
+            </div>
+            <!-- END container -->
+            <div class="works-slider z-index">
+                <div class="works-slider__item">
+                    <img src="assets/img/work-slider.jpg" alt="works slide">
+                </div>
+                <!-- END works-slider__item -->
+                <div class="works-slider__item">
+                    <img src="assets/img/work-slider.jpg" alt="works slide">
+                </div>
+                <!-- END works-slider__item -->
+                <div class="works-slider__item">
+                    <img src="assets/img/work-slider.jpg" alt="works slide">
+                </div>
+                <!-- END works-slider__item -->
+                <div class="works-slider__item">
+                    <img src="assets/img/work-slider.jpg" alt="works slide">
+                </div>
+                <!-- END works-slider__item -->
+                <button class="slider-arrow slider-arrow--prev works-slider__prev">
+                    <svg class="slider-arrow__icon">
+                        <use xlink:href="#slider-arrow-prev" />
+                    </svg>
+                </button>
+                <button class="slider-arrow slider-arrow--next works-slider__next">
+                    <svg class="slider-arrow__icon">
+                        <use xlink:href="#slider-arrow-next" />
+                    </svg>
+                </button>
+            </div>
+            <!-- END works-slider -->
+            <a href="#" class="btn works__btn z-index">View gallery</a>
+        </section>
+        <!-- END work -->
+        <!-- BEGIN team  -->
+        <section id="team" class="team">
+            <div class="container">
+                <i class="section-icon team__icon" style="background-image: url('assets/img/icon-team.png');"></i>
+                <h3 class="section-title team__title">Meet our team</h3>
+                <div class="team-slider">
+                    <div class="col-xs-4 team-slider__item">
+                        <div class="team-info">
+                            <div class="team-info__img-box">
+                                <img class="team-info__img" src="assets/img/Miguel-Obrien.jpg" alt="Miguel Obrien">
+                            </div>
+                            <div class="team-info__content">
+                                <h4 class="team-info__title">Miguel Obrien</h4>
+                                <p class="team-info__position">CEO &amp; Founder</p>
+                            </div>
+                            <div class="social">
+                                <ul class="social__list social__list--ceo">
+                                    <li class="social__item">
+                                        <a href="#" class="social__link social__link--linked-in">
+                                            <svg class="social__icon">
+                                                <use xlink:href="#linked-in" />
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="social__item">
+                                        <a href="#" class="social__link social__link--google">
+                                            <svg class="social__icon">
+                                                <use class="social__icon-google" xlink:href="#google-icon" />
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="social__item">
+                                        <a href="#" class="social__link social__link--facebook">
+                                            <svg class="social__icon">
+                                                <use xlink:href="#facebook" />
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="social__item">
+                                        <a href="#" class="social__link social__link--twitter">
+                                            <svg class="social__icon">
+                                                <use xlink:href="#twitter" />
+                                            </svg>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- END social -->
+                        </div>
+                        <!-- END team-info -->
+                    </div>
+                    <!-- END team-slider__item -->
+                    <div class="col-xs-4 team-slider__item">
+                        <div class="team-info">
+                            <div class="team-info__img-box">
+                                <img class="team-info__img" src="assets/img/Jackie-Carroll.jpg" alt="Jackie Carroll">
+                            </div>
+                            <div class="team-info__content">
+                                <h4 class="team-info__title">Jackie Carroll</h4>
+                                <p class="team-info__position">Art director</p>
+                            </div>
+                            <div class="social">
+                                <ul class="social__list">
+                                    <li class="social__item">
+                                        <a href="#" class="social__link social__link--behance">
+                                            <svg class="social__icon">
+                                                <use xlink:href="#behance" />
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="social__item">
+                                        <a href="#" class="social__link social__link--linked-in">
+                                            <svg class="social__icon">
+                                                <use xlink:href="#linked-in" />
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="social__item">
+                                        <a href="#" class="social__link social__link--google">
+                                            <svg class="social__icon">
+                                                <use class="social__icon-google" xlink:href="#google-icon" />
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="social__item">
+                                        <a href="#" class="social__link social__link--facebook">
+                                            <svg class="social__icon">
+                                                <use xlink:href="#facebook" />
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="social__item">
+                                        <a href="#" class="social__link social__link--twitter">
+                                            <svg class="social__icon">
+                                                <use xlink:href="#twitter" />
+                                            </svg>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- END social -->
+                        </div>
+                        <!-- END team-info -->
+                    </div>
+                    <!-- END team-slider__item -->
+                    <div class="col-xs-4 team-slider__item">
+                        <div class="team-info">
+                            <div class="team-info__img-box">
+                                <img class="team-info__img" src="assets/img/Ida-Morrison.jpg" alt="Ida Morrison">
+                            </div>
+                            <div class="team-info__content">
+                                <h4 class="team-info__title">Ida Morrison</h4>
+                                <p class="team-info__position">Designer</p>
+                            </div>
+                            <div class="social">
+                                <ul class="social__list">
+                                    <li class="social__item">
+                                        <a href="#" class="social__link social__link--behance">
+                                            <svg class="social__icon">
+                                                <use xlink:href="#behance" />
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="social__item">
+                                        <a href="#" class="social__link social__link--linked-in">
+                                            <svg class="social__icon">
+                                                <use xlink:href="#linked-in" />
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="social__item">
+                                        <a href="#" class="social__link social__link--google">
+                                            <svg class="social__icon">
+                                                <use class="social__icon-google" xlink:href="#google-icon" />
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="social__item">
+                                        <a href="#" class="social__link social__link--facebook">
+                                            <svg class="social__icon">
+                                                <use xlink:href="#facebook" />
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="social__item">
+                                        <a href="#" class="social__link social__link--twitter">
+                                            <svg class="social__icon">
+                                                <use xlink:href="#twitter" />
+                                            </svg>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- END social -->
+                        </div>
+                        <!-- END team-info -->
+                    </div>
+                    <!-- END team-slider__item -->
+                    <div class="col-xs-4 team-slider__item">
+                        <div class="team-info">
+                            <div class="team-info__img-box">
+                                <img class="team-info__img" src="assets/img/Miguel-Obrien.jpg" alt="Miguel Obrien">
+                            </div>
+                            <div class="team-info__content">
+                                <h4 class="team-info__title">Miguel Obrien</h4>
+                                <p class="team-info__position">CEO &amp; Founder</p>
+                            </div>
+                            <div class="social">
+                                <ul class="social__list social__list--ceo">
+                                    <li class="social__item">
+                                        <a href="#" class="social__link social__link--linked-in">
+                                            <svg class="social__icon">
+                                                <use xlink:href="#linked-in" />
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="social__item">
+                                        <a href="#" class="social__link social__link--google">
+                                            <svg class="social__icon">
+                                                <use class="social__icon-google" xlink:href="#google-icon" />
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="social__item">
+                                        <a href="#" class="social__link social__link--facebook">
+                                            <svg class="social__icon">
+                                                <use xlink:href="#facebook" />
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="social__item">
+                                        <a href="#" class="social__link social__link--twitter">
+                                            <svg class="social__icon">
+                                                <use xlink:href="#twitter" />
+                                            </svg>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- END social -->
+                        </div>
+                        <!-- END team-info -->
+                    </div>
+                    <!-- END team-slider__item -->
+                    <div class="col-xs-4 team-slider__item">
+                        <div class="team-info">
+                            <div class="team-info__img-box">
+                                <img class="team-info__img" src="assets/img/Jackie-Carroll.jpg" alt="Jackie Carroll">
+                            </div>
+                            <div class="team-info__content">
+                                <h4 class="team-info__title">Jackie Carroll</h4>
+                                <p class="team-info__position">Art director</p>
+                            </div>
+                            <div class="social">
+                                <ul class="social__list">
+                                    <li class="social__item">
+                                        <a href="#" class="social__link social__link--behance">
+                                            <svg class="social__icon">
+                                                <use xlink:href="#behance" />
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="social__item">
+                                        <a href="#" class="social__link social__link--linked-in">
+                                            <svg class="social__icon">
+                                                <use xlink:href="#linked-in" />
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="social__item">
+                                        <a href="#" class="social__link social__link--google">
+                                            <svg class="social__icon">
+                                                <use class="social__icon-google" xlink:href="#google-icon" />
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="social__item">
+                                        <a href="#" class="social__link social__link--facebook">
+                                            <svg class="social__icon">
+                                                <use xlink:href="#facebook" />
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="social__item">
+                                        <a href="#" class="social__link social__link--twitter">
+                                            <svg class="social__icon">
+                                                <use xlink:href="#twitter" />
+                                            </svg>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- END social -->
+                        </div>
+                        <!-- END team-info -->
+                    </div>
+                    <!-- END team-slider__item -->
+                    <div class="col-xs-4 team-slider__item">
+                        <div class="team-info">
+                            <div class="team-info__img-box">
+                                <img class="team-info__img" src="assets/img/Ida-Morrison.jpg" alt="Ida Morrison">
+                            </div>
+                            <div class="team-info__content">
+                                <h4 class="team-info__title">Ida Morrison</h4>
+                                <p class="team-info__position">Designer</p>
+                            </div>
+                            <div class="social">
+                                <ul class="social__list">
+                                    <li class="social__item">
+                                        <a href="#" class="social__link social__link--behance">
+                                            <svg class="social__icon">
+                                                <use xlink:href="#behance" />
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="social__item">
+                                        <a href="#" class="social__link social__link--linked-in">
+                                            <svg class="social__icon">
+                                                <use xlink:href="#linked-in" />
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="social__item">
+                                        <a href="#" class="social__link social__link--google">
+                                            <svg class="social__icon">
+                                                <use class="social__icon-google" xlink:href="#google-icon" />
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="social__item">
+                                        <a href="#" class="social__link social__link--facebook">
+                                            <svg class="social__icon">
+                                                <use xlink:href="#facebook" />
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="social__item">
+                                        <a href="#" class="social__link social__link--twitter">
+                                            <svg class="social__icon">
+                                                <use xlink:href="#twitter" />
+                                            </svg>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- END social -->
+                        </div>
+                        <!-- END team-info -->
+                    </div>
+                    <!-- END team-slider__item -->
+                    <button class="slider-arrow slider-arrow--prev team-slider__prev">
+                        <svg class="slider-arrow__icon">
+                            <use xlink:href="#slider-arrow-prev" />
+                        </svg>
+                    </button>
+                    <button class="slider-arrow slider-arrow--next team-slider__next">
+                        <svg class="slider-arrow__icon">
+                            <use xlink:href="#slider-arrow-next" />
+                        </svg>
+                    </button>
+                </div>
+                <!-- END team-slider -->
+            </div>
+            <!-- END container -->
+        </section>
+        <!-- END team -->
+        <!-- BEGIN contact  -->
+        <section id="contact" class="contact">
+            <div id="map"></div>
+            <div class="form-wrap">
+                <div class="container">
+                    <i class="section-icon contact__icon" style="background-image: url('assets/img/icon-contact.png');"></i>
+                    <h3 class="section-title contact__title">Get in touch</h3>
+                    <form class="contact-form" action="#" method="post">
+                        <div class="contact-form__item">
+                            <input class="contact-form__field" type="text" name="name" placeholder="Your Name *" required>
+                        </div>
+                        <div class="contact-form__item">
+                            <input class="contact-form__field" type="email" name="email" placeholder="Your Email *" required>
+                        </div>
+                        <div class="contact-form__item contact-form__item--big">
+                            <textarea class="contact-form__field contact-form__field--big" name="message" rows="8" placeholder="Your Message *" required></textarea>
+                        </div>
+                        <button class="btn contact-form__btn" type="submit">Send message</button>
+                    </form>
+                </div>
+                <!-- END container -->
+            </div>
+            <!-- END form-wrap -->
+            <div class="modal-wrap">
+                <div class="modal">
+                    <i class="modal__icon" style="background-image: url('assets/img/icon-address.png');"></i>
+                    <div class="modal__content">
+                        <h5 class="modal__title">Ikan Piranha Atas 220C  Malang - East Java Indonesia</h5>
+                    </div>
+                </div>
+                <!-- END modal -->
+                <div class="modal">
+                    <i class="modal__icon" style="background-image: url('assets/img/icon-phone.png');"></i>
+                    <div class="modal__content">
+                        <h5 class="modal__title"><a href="tel:17777777777">+1(777) 777-77-77</a></h5>
+                    </div>
+                </div>
+                <!-- END modal -->
+            </div>
+            <!-- END modal-wrap -->
+        </section>
+        <!-- END contact -->
+    </main>
+    <!-- BEGIN footer  -->
+    <footer>
+        <div class="container">
+            <div class="col-sm-6">
+                <div class="copyright">
+                    <p class="copyright__text">&copy;2014 <span class="copyright__text--bold">tulus</span>driyo. All Rights Reserved.</p>
+                </div>
+                <!-- END copyright -->
+            </div>
+            <!-- END col -->
+            <div class="col-sm-6">
+                <div class="social">
+                    <ul class="social__list">
+                        <li class="social__item">
+                            <a href="#" class="social__link social__link--behance">
+                                <svg class="social__icon">
+                                    <use xlink:href="#behance" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a href="#" class="social__link social__link--linked-in">
+                                <svg class="social__icon">
+                                    <use xlink:href="#linked-in" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a href="#" class="social__link social__link--google">
+                                <svg class="social__icon">
+                                    <use class="social__icon-google" xlink:href="#google-icon" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a href="#" class="social__link social__link--facebook">
+                                <svg class="social__icon">
+                                    <use xlink:href="#facebook" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a href="#" class="social__link social__link--twitter">
+                                <svg class="social__icon">
+                                    <use xlink:href="#twitter" />
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- END social -->
+            </div>
+            <!-- END col-xs-8 -->
+        </div>
+        <!-- END container -->
+    </footer>
+    <!-- END footer -->
+    <div class="scroll-top">
+        <div class="container">
+            <a class="scroll-top__link" href="#scroll-top">
+                <svg class="scroll-top__icon">
+                    <use xlink:href="#slider-arrow-next" />
+                </svg>
+            </a>
+        </div>
+    </div>
+    <!-- END scroll-top -->
+    <script src="assets/plugins/jquery-1.12.4.min.js"></script>
+    <script src="assets/plugins/SmoothScroll.min.js"></script>
+    <script src="assets/plugins/slick.min.js"></script>
+    <script src="assets/plugins/wow.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-wm7qCa7e-pkmWODOhjCah6zUlCKiHd0"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
